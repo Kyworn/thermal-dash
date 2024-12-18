@@ -52,6 +52,23 @@ Launch launch_all_background_admin.sh with admin privileges to run the applicati
 Navigate to `http://localhost:5000` to view the dashboard
 Admin panel: `http://localhost:5000/admin`
 
+## 🛑 Stopping the Server
+
+### Killing Python Processes
+
+If the server doesn't stop properly, you may need to manually kill the Python processes in Task Manager:
+
+1. Open Windows Task Manager (Ctrl + Shift + Esc)
+2. Go to the "Processes" tab
+3. Look for and end ALL Python processes:
+   - Look for processes named `python.exe`
+   - Pay special attention to `python (2)` and other Python instances
+   - Ensure you end ALL related Python processes
+
+**Warning**: 
+- Be careful to only kill Python processes related to this application
+- If unsure, note the Process ID (PID) before ending tasks
+
 ## 🖥️ Screenshots
 
 [Add screenshots of your application here]
