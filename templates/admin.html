@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Background Admin</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+</head>
+<body>
+    <h1>Video Background Admin</h1>
+
+    <div id="video-list">
+        <form id="video-form">
+            {% for video in videos %}
+            <div class="video-item">
+                <input type="radio" 
+                       id="{{ video }}" 
+                       name="video" 
+                       value="{{ video }}"
+                       {% if video == current_video %}checked{% endif %}>
+                <label for="{{ video }}">{{ video }}</label>
+            </div>
+            {% endfor %}
+            <button type="submit" style="width: 100%; padding: 10px; margin-top: 10px;">Update Background</button>
+        </form>
+    </div>
+
+    <div id="upload-section">
+        <h2>Upload New Video</h2>
+        <form id="upload-form" enctype="multipart/form-data">
+            <input type="file" name="video" accept="video/*" required>
+            <button type="submit" style="width: 100%; padding: 10px; margin-top: 10px;">Upload Video</button>
+        </form>
+    </div>
+
+    <div id="status-message"></div>
+
+    <script src="{{ url_for('static', filename='js/admin.js') }}"></script>
+</body>
+</html>

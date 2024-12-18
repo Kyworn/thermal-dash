@@ -1,0 +1,28 @@
+# Ignore video files in static/videos
+static/videos/*.mp4
+static/videos/*.avi
+static/videos/*.mov
+static/videos/*.mkv
+static/videos/*.webm
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+.env
+
+# IDE specific files
+.vscode/
+.idea/
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# OS generated files
+.DS_Store
+Thumbs.db

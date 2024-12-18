@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+#video-list {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.video-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.video-item input[type="radio"] {
+    margin-right: 10px;
+}
+
+#upload-section {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#status-message {
+    margin-top: 15px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+#status-message.success {
+    background-color: #dff0d8;
+    color: #3c763d;
+}
+
+#status-message.error {
+    background-color: #f2dede;
+    color: #a94442;
+}

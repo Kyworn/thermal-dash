@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Monitor</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+    <div id="video-container">
+        <video autoplay muted loop id="background-video">
+            <source src="/static/videos/{{ background_video }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div id="temperature-overlay">
+        <div id="temperature-text">
+            <p><span class="temp-label">CPU:</span> <span class="temp-value" id="cpu-temp">--</span>°C</p>
+            <p><span class="temp-label">GPU:</span> <span class="temp-value" id="gpu-temp">--</span>°C</p>
+        </div>
+        <canvas id="temperature-chart"></canvas>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</body>
+</html>
